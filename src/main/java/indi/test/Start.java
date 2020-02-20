@@ -12,13 +12,10 @@ public class Start {
     private String inputText;
 
     public Start() {
-        systemDict = new ArrayList<>();
-        userDict = new ArrayList<>();
-        supplySystemDict();
-        supplyUserDict();
+
     }
 
-    public void supplySystemDict() {
+    public void supplySystemDict(List<String> systemDict) {
         systemDict.add("i");
         systemDict.add("like");
         systemDict.add("sam");
@@ -30,7 +27,7 @@ public class Start {
         systemDict.add("man go");
     }
 
-    public void supplyUserDict() {
+    public void supplyUserDict(List<String> userDict) {
         userDict.add("i");
         userDict.add("like");
         userDict.add("sam");
@@ -52,6 +49,12 @@ public class Start {
 
     public static void main(String[] args) {
         Start start = new Start();
+        List<String> systemDict = new ArrayList<>();
+        List<String> userDict = new ArrayList<>();
+        start.supplySystemDict(systemDict);
+        start.supplyUserDict(userDict);
+        start.setSystemDict(systemDict);
+        start.setUserDict(userDict);
         start.setInputText("ilikesamsungmobilemango");
         start.begin();
     }
