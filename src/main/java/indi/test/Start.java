@@ -36,7 +36,6 @@ public class Start {
         userDict.add("mobile");
         userDict.add("ice");
         userDict.add("cream");
-        userDict.add("man go");
         userDict.add("mango");
     }
 
